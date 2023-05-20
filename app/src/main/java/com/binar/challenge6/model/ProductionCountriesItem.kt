@@ -2,6 +2,10 @@ package com.binar.challenge6.model
 
 import com.google.gson.annotations.SerializedName
 
+@Suppress("unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused"
+)
 data class ProductionCountriesItem(
 
     @field:SerializedName("iso_3166_1")

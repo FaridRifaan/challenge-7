@@ -1,3 +1,10 @@
+@file:Suppress("PrivatePropertyName", "PrivatePropertyName", "PrivatePropertyName",
+    "PrivatePropertyName", "PrivatePropertyName", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused"
+)
+
 package com.binar.challenge6.viewmodel
 
 import androidx.lifecycle.LiveData
@@ -16,9 +23,12 @@ import retrofit2.Callback
 import retrofit2.Response
 import javax.inject.Inject
 
+@Suppress("PrivatePropertyName", "PrivatePropertyName", "PrivatePropertyName",
+    "PrivatePropertyName", "PrivatePropertyName", "unused"
+)
 @HiltViewModel
-class DetailViewModel @Inject constructor( private val movieDataClient : APIMovieInterface,
-        val db : FavoriteMovieDao): ViewModel() {
+class DetailViewModel @Inject constructor(private val movieDataClient : APIMovieInterface,
+                                          private val db : FavoriteMovieDao): ViewModel() {
 
     private val _movie: MutableLiveData<DetailMovieItem?> = MutableLiveData()
     val movie: LiveData<DetailMovieItem?> get() = _movie
@@ -27,6 +37,7 @@ class DetailViewModel @Inject constructor( private val movieDataClient : APIMovi
     val favMovie: LiveData<FavoriteMovie> get() = _FavMovie
 
     private val _DeleteFavMovie: MutableLiveData<FavoriteMovie> = MutableLiveData()
+    @Suppress("unused", "unused", "unused")
     val deleteFavMovie: LiveData<FavoriteMovie> get() = _DeleteFavMovie
 
     private val _IsFav: MutableLiveData<Boolean> = MutableLiveData()

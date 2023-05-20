@@ -1,19 +1,24 @@
+@file:Suppress("RedundantNullableReturnType", "RedundantNullableReturnType",
+    "RedundantNullableReturnType", "RedundantNullableReturnType", "RedundantNullableReturnType"
+)
+
 package com.binar.challenge6.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.binar.challenge6.R
 import com.binar.challenge6.adapter.AdapterFavorite
 import com.binar.challenge6.databinding.FragmentFavoriteBinding
-import com.binar.challenge6.databinding.FragmentProfileBinding
 import com.binar.challenge6.viewmodel.FavoriteViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
+@Suppress("RedundantNullableReturnType", "RedundantNullableReturnType",
+    "RedundantNullableReturnType", "RedundantNullableReturnType", "RedundantNullableReturnType"
+)
 @AndroidEntryPoint
 class FavoriteFragment : Fragment() {
 

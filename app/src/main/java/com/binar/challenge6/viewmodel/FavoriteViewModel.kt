@@ -1,3 +1,5 @@
+@file:Suppress("unused", "unused", "unused", "PrivatePropertyName", "PrivatePropertyName")
+
 package com.binar.challenge6.viewmodel
 
 import androidx.lifecycle.LiveData
@@ -10,8 +12,9 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+@Suppress("unused", "unused", "unused", "PrivatePropertyName", "PrivatePropertyName")
 @HiltViewModel
-class FavoriteViewModel @Inject constructor(val db : FavoriteMovieDao): ViewModel(){
+class FavoriteViewModel @Inject constructor(private val db : FavoriteMovieDao): ViewModel(){
 
     private val _movie: MutableLiveData<FavoriteMovie> = MutableLiveData()
     val movie: LiveData<FavoriteMovie> get() = _movie

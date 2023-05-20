@@ -1,21 +1,30 @@
+@file:Suppress("RemoveRedundantQualifierName", "RemoveRedundantQualifierName",
+    "PrivatePropertyName", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused"
+)
+
 package com.binar.challenge6.adapter
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.binar.challenge6.R
 import com.binar.challenge6.databinding.MovieListBinding
-import com.binar.challenge6.model.MoviePopular
 import com.binar.challenge6.model.Result
 import com.bumptech.glide.Glide
 
-class MovieAdapter(var listMovie: List<Result>): RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
-    class ViewHolder(var binding: MovieListBinding): RecyclerView.ViewHolder(binding.root) {
+@Suppress("RemoveRedundantQualifierName", "RemoveRedundantQualifierName", "PrivatePropertyName",
+    "unused"
+)
+class MovieAdapter(private var listMovie: List<Result>): RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
+    class ViewHolder(private var binding: MovieListBinding): RecyclerView.ViewHolder(binding.root) {
         private val IMAGE_BASE = "https://image.tmdb.org/t/p/w500/"
 
+        @SuppressLint("SetTextI18n")
         fun bindMovie(ItemsMovie : Result){
             binding.titleMovie.text = ItemsMovie.title
             binding.releaseMovie.text = "Release at: " + ItemsMovie.releaseDate

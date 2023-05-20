@@ -2,6 +2,7 @@ package com.binar.challenge6.model
 
 import com.google.gson.annotations.SerializedName
 
+@Suppress("unused")
 data class DetailMovieItem(
 
     @field:SerializedName("original_language")

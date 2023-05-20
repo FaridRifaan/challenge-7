@@ -1,3 +1,19 @@
+@file:Suppress("unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "RedundantWith",
+    "RemoveRedundantQualifierName", "RemoveRedundantQualifierName", "RemoveRedundantQualifierName",
+    "RemoveRedundantQualifierName", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
+    "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
+    "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
+    "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
+    "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate"
+)
+
 package com.binar.challenge6.adapter
 
 import android.os.Bundle
@@ -10,6 +26,21 @@ import com.binar.challenge6.database.FavoriteMovie
 import com.binar.challenge6.databinding.MovieListFavBinding
 import com.bumptech.glide.Glide
 
+@Suppress("unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "RemoveRedundantQualifierName", "RemoveRedundantQualifierName", "RemoveRedundantQualifierName",
+    "RemoveRedundantQualifierName", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
+    "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
+    "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
+    "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
+    "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate"
+)
 class AdapterFavorite(private var listMovie: List<FavoriteMovie>): RecyclerView.Adapter<AdapterFavorite.ViewHolder>() {
     class ViewHolder(var binding: MovieListFavBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(movie: FavoriteMovie) {

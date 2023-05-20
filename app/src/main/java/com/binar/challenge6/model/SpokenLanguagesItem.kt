@@ -1,7 +1,10 @@
+@file:Suppress("unused")
+
 package com.binar.challenge6.model
 
 import com.google.gson.annotations.SerializedName
 
+@Suppress("unused", "unused", "unused")
 data class SpokenLanguagesItem(
 
     @field:SerializedName("name")

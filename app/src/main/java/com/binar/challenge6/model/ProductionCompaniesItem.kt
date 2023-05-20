@@ -1,7 +1,14 @@
+@file:Suppress("unused", "unused")
+
 package com.binar.challenge6.model
 
 import com.google.gson.annotations.SerializedName
 
+@Suppress("unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused"
+)
 data class ProductionCompaniesItem(
 
     @field:SerializedName("logo_path")

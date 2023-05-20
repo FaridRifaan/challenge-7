@@ -3,15 +3,13 @@ package com.binar.challenge6.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.binar.challenge6.database.FavoriteMovieDao
 import com.binar.challenge6.model.MoviePopular
-import com.binar.challenge6.network.APIMovie
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import com.binar.challenge6.model.Result
 import com.binar.challenge6.network.APIMovieInterface
 import dagger.hilt.android.lifecycle.HiltViewModel
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import javax.inject.Inject
 
 @HiltViewModel

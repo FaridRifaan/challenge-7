@@ -1,22 +1,44 @@
+@file:Suppress("KotlinConstantConditions", "RemoveCurlyBracesFromTemplate",
+    "RedundantNullableReturnType", "RedundantNullableReturnType", "RedundantNullableReturnType",
+    "RedundantNullableReturnType", "RedundantNullableReturnType", "RedundantNullableReturnType",
+    "LiftReturnOrAssignment", "SpellCheckingInspection", "SpellCheckingInspection",
+    "SpellCheckingInspection", "SpellCheckingInspection", "SpellCheckingInspection",
+    "SpellCheckingInspection", "SpellCheckingInspection", "SpellCheckingInspection",
+    "SpellCheckingInspection", "SpellCheckingInspection", "SpellCheckingInspection",
+    "SpellCheckingInspection", "SpellCheckingInspection", "SpellCheckingInspection", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused"
+)
+
 package com.binar.challenge6.fragment
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.binar.challenge6.R
 import com.binar.challenge6.database.FavoriteMovie
 import com.binar.challenge6.databinding.FragmentDetailBinding
-import com.bumptech.glide.Glide
-import com.binar.challenge6.model.Result
 import com.binar.challenge6.viewmodel.DetailViewModel
+import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
 import kotlin.properties.Delegates
 
+@Suppress("KotlinConstantConditions", "RemoveCurlyBracesFromTemplate",
+    "RedundantNullableReturnType", "RedundantNullableReturnType", "RedundantNullableReturnType",
+    "RedundantNullableReturnType", "RedundantNullableReturnType", "RedundantNullableReturnType",
+    "LiftReturnOrAssignment", "SpellCheckingInspection", "SpellCheckingInspection",
+    "SpellCheckingInspection", "SpellCheckingInspection", "SpellCheckingInspection",
+    "SpellCheckingInspection", "SpellCheckingInspection", "SpellCheckingInspection",
+    "SpellCheckingInspection", "SpellCheckingInspection", "SpellCheckingInspection",
+    "SpellCheckingInspection", "SpellCheckingInspection", "SpellCheckingInspection", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused"
+)
 @AndroidEntryPoint
 class DetailFragment : Fragment() {
     private lateinit var binding: FragmentDetailBinding
@@ -123,6 +145,7 @@ class DetailFragment : Fragment() {
             }
         }
     }
+
 
     private fun checkFavoriteMovie(movieId: Int) {
         viewModel.isFavoriteMovie(movieId)

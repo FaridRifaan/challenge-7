@@ -1,25 +1,28 @@
+@file:Suppress("RedundantNullableReturnType")
+
 package com.binar.challenge6.fragment
 
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.binar.challenge6.R
 import com.binar.challenge6.databinding.FragmentRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.AndroidEntryPoint
 
+@Suppress("RedundantNullableReturnType")
 @AndroidEntryPoint
 class RegisterFragment : Fragment() {
 
-    lateinit var sharedPrefRegis : SharedPreferences
-    lateinit var binding: FragmentRegisterBinding
-    lateinit var auth : FirebaseAuth
+    private lateinit var sharedPrefRegis : SharedPreferences
+    private lateinit var binding: FragmentRegisterBinding
+    private lateinit var auth : FirebaseAuth
 
 
     override fun onCreateView(
@@ -46,12 +49,12 @@ class RegisterFragment : Fragment() {
 
 
     private fun register(){
-        var createUsername = binding.etUsernameRegister.text.toString()
-        var createEmail = binding.etEmailRegister.text.toString()
-        var createPass = binding.etPasswordRegister.text.toString()
-        var createRepeatPass = binding.etKonfirmPasswordRegister.text.toString()
+        val createUsername = binding.etUsernameRegister.text.toString()
+        val createEmail = binding.etEmailRegister.text.toString()
+        val createPass = binding.etPasswordRegister.text.toString()
+        val createRepeatPass = binding.etKonfirmPasswordRegister.text.toString()
 
-        var addUser = sharedPrefRegis.edit()
+        val addUser = sharedPrefRegis.edit()
         addUser.putString("USER", createUsername)
 
         if (createUsername.isNotEmpty() && createEmail.isNotEmpty() && createPass.isNotEmpty() && createRepeatPass.isNotEmpty()) {

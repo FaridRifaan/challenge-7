@@ -1,13 +1,18 @@
+@file:Suppress("CanBeVal", "CanBeVal", "CanBeVal", "CanBeVal", "CanBeVal",
+    "RedundantNullableReturnType", "RedundantNullableReturnType", "RedundantNullableReturnType",
+    "RedundantNullableReturnType", "RedundantNullableReturnType"
+)
+
 package com.binar.challenge6.fragment
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.Observer
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,16 +20,15 @@ import com.binar.challenge6.R
 import com.binar.challenge6.adapter.MovieAdapter
 import com.binar.challenge6.databinding.FragmentHomeBinding
 import com.binar.challenge6.viewmodel.ViewModelMovie
-import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.AndroidEntryPoint
 
+@Suppress("CanBeVal", "CanBeVal", "CanBeVal", "CanBeVal", "CanBeVal", "RedundantNullableReturnType")
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var viewModelHome: ViewModelMovie
-    private lateinit var auth : FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,6 +39,7 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
