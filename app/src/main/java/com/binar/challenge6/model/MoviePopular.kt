@@ -3,7 +3,7 @@ package com.binar.challenge6.model
 
 import com.google.gson.annotations.SerializedName
 
-data class MoviePopular<T>(
+data class MoviePopular(
     @SerializedName("page")
     val page: Int,
     @SerializedName("results")

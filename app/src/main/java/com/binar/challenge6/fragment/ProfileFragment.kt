@@ -12,8 +12,9 @@ import androidx.navigation.Navigation
 import com.binar.challenge6.R
 import com.binar.challenge6.databinding.FragmentProfileBinding
 import com.google.firebase.auth.FirebaseAuth
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class ProfileFragment : Fragment() {
     lateinit var binding : FragmentProfileBinding
     lateinit var sharedPref : SharedPreferences
@@ -25,7 +26,7 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentProfileBinding.inflate(inflater, container, false)
+        binding = FragmentProfileBinding.inflate(inflater, container,false)
         return binding.root
     }
 
@@ -33,6 +34,18 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         sharedPref = requireActivity().getSharedPreferences("REGISTERUSER", Context.MODE_PRIVATE)
+
+        val getUser = sharedPref.getString("USER", "")
+        binding.etUsername.setText(getUser)
+
+        val getNama = sharedPref.getString("NAMALENGKAP", "")
+        binding.etNamaLengkap.setText(getNama)
+
+        val getTgl = sharedPref.getString("TANGGAL", "")
+        binding.etTanggalLahir.setText(getTgl)
+
+        val getAlamat = sharedPref.getString("ALAMAT", "")
+        binding.etAlamat.setText(getAlamat)
 
         binding.btnUpdate.setOnClickListener {
             toUpdate()
@@ -50,6 +63,9 @@ class ProfileFragment : Fragment() {
         val alamat = binding.etAlamat.text.toString()
         var adduser = sharedPref.edit()
         adduser.putString("USER", updateUsername)
+        adduser.putString("NAMALENGKAP", namaLengkap)
+        adduser.putString("TANGGAL", ttl)
+        adduser.putString("ALAMAT", alamat)
         adduser.apply()
         auth = FirebaseAuth.getInstance()
         auth.signOut()

@@ -12,8 +12,9 @@ import androidx.navigation.fragment.findNavController
 import com.binar.challenge6.R
 import com.binar.challenge6.databinding.FragmentRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class RegisterFragment : Fragment() {
 
     lateinit var sharedPrefRegis : SharedPreferences

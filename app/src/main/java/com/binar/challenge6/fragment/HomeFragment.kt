@@ -15,12 +15,16 @@ import com.binar.challenge6.R
 import com.binar.challenge6.adapter.MovieAdapter
 import com.binar.challenge6.databinding.FragmentHomeBinding
 import com.binar.challenge6.viewmodel.ViewModelMovie
+import com.google.firebase.auth.FirebaseAuth
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
-    lateinit var binding: FragmentHomeBinding
-    lateinit var sharedPreferences: SharedPreferences
+    private lateinit var binding: FragmentHomeBinding
+    private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var viewModelHome: ViewModelMovie
+    private lateinit var auth : FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,6 +38,9 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        viewModelHome = ViewModelProvider(this)[ViewModelMovie::class.java]
+        observeMovie()
+
         sharedPreferences = requireContext().getSharedPreferences("REGISTERUSER", Context.MODE_PRIVATE)
 
         var getUsername = sharedPreferences.getString("USER", "")
@@ -45,19 +52,20 @@ class HomeFragment : Fragment() {
             addUser.apply()
             Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_profileFragment)
         }
+        binding.imgLove.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_favoriteFragment)
+        }
     }
 
-    override fun onStart() {
-        super.onStart()
-        val movieViewModel = ViewModelProvider(this).get(ViewModelMovie::class.java)
-        movieViewModel.getMovie()
-        movieViewModel.liveDataMovie.observe(viewLifecycleOwner, Observer {
-            if(it != null){
-                binding.movieRecyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+    private fun observeMovie(){
+        binding.movieRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        binding.movieRecyclerView.setHasFixedSize(false)
+        viewModelHome.setMoviesList()
+        viewModelHome.movie.observe(viewLifecycleOwner) {
+            if (it != null) {
                 binding.movieRecyclerView.adapter = MovieAdapter(it)
             }
-        })
-
+        }
     }
 
 
