@@ -103,7 +103,6 @@ class DetailFragment : Fragment() {
                 }
             }
         }
-
     }
 
     private fun setFavoriteListener() {
